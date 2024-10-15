@@ -1,0 +1,552 @@
+body {
+    background: #EEEEEE;
+}
+
+.font_Jost {
+    font-family: Jost;
+    font-weight: 400;
+}
+
+.font60 {
+    font-family: Forum;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+
+}
+
+.font_size15 {
+    font-size: 15px;
+}
+
+.font_size12 {
+    font-size: 12px;
+}
+
+.font_size17 {
+    font-size: 17px;
+}
+
+.font_size25 {
+    font-size: 25px;
+}
+
+.undermessage:hover {
+    color: #BB8C5F;
+}
+
+.headA {
+    color: white;
+    text-decoration: none;
+}
+
+.sectionsHeader:hover {
+    cursor: pointer;
+    color: #BB8C5F;
+}
+
+.hr_header {
+    border: 1px solid #524336;
+    width: 100%;
+
+}
+
+/* Хедер окно */
+.popup {
+    position: fixed;
+    left: 0;
+    top: 328px;
+    margin-top: -178px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    margin-top: -356px;
+    margin-left: 115px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: auto;
+    height: 411px;
+    max-height: 606px;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* TAB */
+.tab {}
+
+.tab>input[type="radio"] {
+    display: none;
+}
+
+.tab-content {
+    margin-top: -10px;
+    display: none;
+}
+
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2 {
+    display: block;
+}
+
+.tab_upline {
+    display: none;
+}
+
+.tab_upline_2 {
+    margin-left: 113px;
+}
+
+#tab-btn-1:checked~#tab_upline_1,
+#tab-btn-2:checked~#tab_upline_2 {
+    display: block;
+    font-family: Jost;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25.5px;
+    text-align: left;
+
+}
+
+#tab-btn-1:checked~.tab_title_1,
+#tab-btn-2:checked~.tab_title_2 {
+    color: #BB8C5F;
+    font-family: Jost;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 25.5px;
+
+}
+
+.tab_title_1 {
+    margin-right: 15px;
+}
+
+.tab_title:hover {
+    cursor: pointer;
+}
+
+/* list */
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-list {
+    margin-right: 50px;
+}
+
+.list li {
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+
+}
+
+.list li:hover {
+    cursor: pointer;
+
+    color: #BB8C5F;
+}
+
+#tab-btn-1:checked~#content-1 .list li {
+    margin: 5px 0;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25.5px;
+    text-align: left;
+}
+
+#tab-btn-1:checked~.list li {}
+
+/* catalog_hr */
+.catalog_hr {
+    border: 1px solid #D0D0D0;
+    width: auto;
+}
+
+/* Image Bagraund Block */
+
+.background-block {
+
+    background-image: url('https://tattoo.loc/img/Bg2.png');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    align-items: flex-start;
+
+
+    color: white;
+}
+
+.text-overlay {
+    margin-top: 150px;
+    position: relative;
+    max-width: 591px;
+}
+
+.text-overlay h1 {
+    font-family: Forum;
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 75px;
+    text-align: left;
+    color: #BB8C5F;
+}
+
+.text-overlay p {
+    font-family: Jost;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+    color: #FAF6F2;
+    width: 431px;
+    margin: 20px 0 40px;
+}
+
+.text-overlay button {
+    width: 275px;
+    height: 70px;
+    background: #524336;
+    border: 2px solid #BB8C5F;
+    color: white;
+}
+
+/* tabs */
+.product-tabs {
+    width: 100%;
+}
+
+.tab-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.tab-links li {
+    margin: 0 10px;
+}
+
+.tab-links a {
+    text-decoration: none;
+    color: #3E424B;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 34.5px;
+    text-align: left;
+
+}
+
+.tab-links .active a {
+    color: #BB8C5F;
+}
+
+.tab_cat-content {}
+
+.tab_cat {
+    display: none;
+}
+
+.tab_cat.active {
+    display: block;
+}
+
+/* card */
+.Card_body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+.card {
+    width: 289px;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    padding: 16px;
+    margin: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.card-price {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.add-to-cart {
+    display: none;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:not(:hover) {
+    transform: scale(0.95);
+}
+
+.card:hover .add-to-cart {
+    display: block;
+}
+
+/* UI elements */
+.btn_tat {
+    width: 250px;
+    height: 70px;
+    color: #BB8C5F;
+    border: none;
+    background-image: url('/svg/btn.svg');
+    background-size: contain;
+    background-position: center;
+}
+
+/*  CATALOG */
+.cat {
+    height: 350px;
+    background: #F5F5F5;
+    width: auto;
+    text-decoration: none;
+}
+
+.cat1 {
+    width: 494px;
+    background-image: url('/img/tattoo_kits.png');
+    /* Путь относительно корня */
+    background-size: 349px;
+    /* или другие значения, если нужно */
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat2 {
+    width: 701px;
+    background-image: url('/img/holders.png');
+    background-size: 535px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat3 {
+    width: 342px;
+    background-image: url('/img/tattoo_machines.png');
+    background-size: 259px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat4 {
+    width: 493px;
+    background-image: url('/img/Pedals_wires.png');
+    background-size: 351px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat5 {
+    width: 341px;
+    background-image: url('/img/Paints.png');
+    background-size: 307px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat6 {
+    width: 495px;
+    background-image: url('/img/Power_supplies.png');
+    background-size: 440px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat7 {
+    width: 341px;
+    background-image: url('/img/Tips.png');
+    background-size: 308px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat8 {
+    width: 341px;
+    background-image: url('/img/Tattoo_needles.png');
+    background-size: 307px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat9 {
+    width: 340px;
+    background-image: url('/img/Protection_containers_consumables.png');
+    background-size: 277px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat10 {
+    width: 340px;
+    background-image: url('/img/Accessories.png');
+    background-size: 277px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat11 {
+    width: 495px;
+    background-image: url('/img/Printers_tablets.png');
+    background-size: 439px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.cat p {
+    font-family: Jost;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 33px;
+    text-align: left;
+    color: #3E424B;
+
+}
+
+/* hits */
+
+.imghit1 {
+    width: 950px;
+    height: 470px;
+    background-image: url('/img/LipNitn.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.imghit2 {
+    width: 950px;
+    height: 470px;
+    background-image: url('/img/FoxxViper.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.hitTitle {
+    font-family: Jost;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    text-align: left;
+    color: #FAF6F2;
+}
+
+.img_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.img_wrapper {
+    position: relative;
+    width: 950px;
+    height: 470px;
+    width: calc(50% - 5px);
+}
+
+.img_title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.img_link {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.img_right_title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.img_right_link {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.image_wrapper img {
+    width: 100%;
+    height: auto;
+    max-width: 950px;
+}
