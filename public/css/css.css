@@ -466,7 +466,7 @@ body {
 /* hits */
 
 .imghit1 {
-    width: 950px;
+    width: 970px;
     height: 470px;
     background-image: url('/img/LipNitn.png');
     background-size: auto;
@@ -476,7 +476,7 @@ body {
 }
 
 .imghit2 {
-    width: 950px;
+    width: 970px;
     height: 470px;
     background-image: url('/img/FoxxViper.png');
     background-size: auto;
@@ -494,59 +494,261 @@ body {
     color: #FAF6F2;
 }
 
-.img_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 20px;
-}
-
-.img_wrapper {
-    position: relative;
-    width: 950px;
-    height: 470px;
-    width: calc(50% - 5px);
-}
-
-.img_title {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font-weight: bold;
-    color: #333;
-}
-
-.img_link {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: #007bff;
+.linkCat {
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 400;
+    display: inline-block;
+    color: #BB8C5F;
+    padding: 10px 20px;
     text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.img_right_title {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    text-align: left;
-    font-weight: bold;
-    color: #333;
+/* .customLine {
+    width: 173px;
+    height: 2px;
+    background-image: url('/img/LineCat.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+} */
+/* About home */
+.imgAbout {
+    width: 930px;
+    height: 635px;
+    background-image: url('/img/aboutUs.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
 }
 
-.img_right_link {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: #007bff;
-    text-decoration: none;
+.homeAbout {
+    width: 598px;
+    height: 503px;
+    margin: 80px 0 0 30px;
 }
 
-.image_wrapper img {
-    width: 100%;
+.homeAboutTitle {
+    font-family: Forum;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 65px;
+    color: #BB8C5F;
+}
+
+.homeAboutText {
+    font-family: Jost;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23.8px;
+    color: #3E424B;
+}
+
+/* Mailing */
+.imgMailing {
+    width: 952px;
+    height: 562px;
+    background-image: url('/img/Mailing.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+.Mailing {
+    width: 524px;
     height: auto;
-    max-width: 950px;
+    margin: 50px;
+    text-align: left;
+}
+
+.mailingTitle {
+    font-family: Forum;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #3E424B;
+    text-align: left;
+}
+
+.mailingText {
+    font-family: Jost;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 28.75px;
+    color: #3E424B;
+    text-align: left;
+}
+
+/* Form Mailing */
+.emailInput,
+.nameInput {
+    background-color: #F5F5F5;
+    border-radius: 0;
+    /* Убираем закругления */
+    border: 1px solid #F5F5F5;
+    /* Можно добавить границу */
+}
+
+.formGroup label {
+    margin-bottom: 10px;
+}
+
+
+/* Дополнительно можно добавить стили для hover/фокуса на инпутах */
+.emailInput:focus,
+.nameInput:focus {
+    border-color: #BB8C5F;
+    /* Цвет границы при фокусе на инпуте */
+    outline: none;
+    /* Убираем стандартный обвод */
+}
+
+.form-check-input {
+    display: none;
+    /* Скрыть стандартный чекбокс */
+}
+
+.form-check-input+.form-check-label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.form-check-input+.form-check-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #BB8C5F;
+    /* Цвет границы */
+    background-color: transparent;
+    /* Цвет фона когда не выбран */
+    border-radius: 3px;
+    /* Радиус углов */
+}
+
+.form-check-input:checked+.form-check-label::before {
+    background-color: #BB8C5F;
+    /* Цвет фона когда выбран */
+    border-color: #BB8C5F;
+    /* Цвет границы когда выбран */
+}
+
+.form-check-input:checked+.form-check-label::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    /* Цвет галочки */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.btn_tat_black {
+    width: 250px;
+    height: 70px;
+    color: #FAF6F2;
+    border: 1px solid #EEEEEE;
+    /* border: 1px solid ; */
+    background-image: url('/img/btnBlack.png');
+    background-size: contain;
+    background-position: center;
+}
+
+/* footer */
+.footLeft {
+    width: 615px;
+    height: 141px;
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+.footerLink {
+    text-decoration: none;
+    color: #E9ECF1;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26.7px;
+    text-align: left;
+}
+
+.hrFooter {
+    width: 2px;
+    /* Ширина линии */
+    height: 255px;
+    /* Высота линии */
+    background-color: #524336;
+    /* Цвет линии */
+    margin: 0 auto;
+}
+
+.midLink {
+    width: 126px
+}
+
+.leftLink {
+    width: 238px;
+}
+
+.rightLink {
+    width: 100px;
+}
+
+.footRight {
+    width: 350px;
+    height: 141px;
+}
+
+.mes {
+    display: flex;
+    gap: 10px;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    color: #FAF6F2;
+    align-items: center;
+    text-align: center;
+    place-items: center;
+}
+
+.mes p {
+    margin: 0;
+}
+
+.timeWork {
+    font-family: Jost;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25.5px;
+    text-align: left;
+    color: #636B78;
+}
+
+.FootEmail {
+    display: flex;
+    gap: 20px;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+
+}
+.FootEmail p {
+    margin: 0;
 }
