@@ -37,11 +37,11 @@
                     alt="">
             </div>
             <div class=" d-flex justify-content-between justify-content-center align-items-center" style="gap: 60px">
-                <a href="#" class="headA sectionsHeader font_size17">Промокоды</a>
+                <a href="{{route('promoCodes')}}" class="headA sectionsHeader font_size17">Промокоды</a>
                 <a href="#" class="headA sectionsHeader font_size17">Скидки</a>
                 <a href="#" class="headA sectionsHeader font_size17">Помощь</a>
-                <a href="#" class="headA sectionsHeader font_size17">О нас</a>
-                <a href="#" class="headA sectionsHeader font_size17">Контакты</a>
+                <a href="{{route('home')}}" class="headA sectionsHeader font_size17">О нас</a>
+                <a href="{{route('contacts')}}" class="headA sectionsHeader font_size17">Контакты</a>
             </div>
         </div>
     </div>
@@ -49,6 +49,9 @@
 
 <!-- Всплывающее окно для категорий -->
 <div class="popup" id="categories-popup" style="display: none;">
+    <div class="lineheader">
+        <img src="{{asset('img/lineheader.png')}}" alt="">
+    </div>
     <div class="popup-content tab">
         <span class="close" id="close-popup">&times;</span>
         <input checked id="tab-btn-1" class="tab_input" name="tab-btn" type="radio" value="">
