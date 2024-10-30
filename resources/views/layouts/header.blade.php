@@ -27,7 +27,18 @@
                 <img src="{{ asset('svg/basket.svg') }}" alt="">
             </div>
             <img src="{{ asset('svg/likes.svg') }}" alt="">
-            <img src="{{ asset('svg/profil.svg') }}" alt="">
+
+            @if (Route::has('login'))
+                @auth
+                    <a href="{{ route('register') }}">
+                        <img src="{{ asset('svg/profil.svg') }}" alt="">
+                    </a>
+                    <a  href="{{ route('logout') }}"><img src="{{ asset('svg/logout.svg') }}" alt=""></a>
+                @else
+                    <a href="{{ route('register') }}"><img src="{{ asset('svg/profil.svg') }}" alt=""></a>
+                    <a href="{{ route('login') }}"><img src="{{ asset('svg/login.svg') }}" alt=""></a>
+                @endauth
+            @endif
         </div>
         <div class="hr_header"></div>
         <div class="d-flex justify-content-between justify-content-center align-items-center pb-3 mt-2">
@@ -37,11 +48,11 @@
                     alt="">
             </div>
             <div class=" d-flex justify-content-between justify-content-center align-items-center" style="gap: 60px">
-                <a href="{{route('promoCodes')}}" class="headA sectionsHeader font_size17">Промокоды</a>
+                <a href="{{ route('promoCodes') }}" class="headA sectionsHeader font_size17">Промокоды</a>
                 <a href="#" class="headA sectionsHeader font_size17">Скидки</a>
                 <a href="#" class="headA sectionsHeader font_size17">Помощь</a>
-                <a href="{{route('home')}}" class="headA sectionsHeader font_size17">О нас</a>
-                <a href="{{route('contacts')}}" class="headA sectionsHeader font_size17">Контакты</a>
+                <a href="{{ route('home') }}" class="headA sectionsHeader font_size17">О нас</a>
+                <a href="{{ route('contacts') }}" class="headA sectionsHeader font_size17">Контакты</a>
             </div>
         </div>
     </div>
@@ -50,7 +61,7 @@
 <!-- Всплывающее окно для категорий -->
 <div class="popup" id="categories-popup" style="display: none;">
     <div class="lineheader">
-        <img src="{{asset('img/lineheader.png')}}" alt="">
+        <img src="{{ asset('img/lineheader.png') }}" alt="">
     </div>
     <div class="popup-content tab">
         <span class="close" id="close-popup">&times;</span>
@@ -61,7 +72,8 @@
         <input id="tab-btn-2" class="tab_input" name="tab-btn" type="radio" value="">
         <label for="tab-btn-2" class="tab_title_2 tab_title">По брендам</label>
         <br>
-        <img src="{{ asset('svg/LineCatalog.svg') }}" id="tab_upline_1" class="tab_upline tab_upline_1 " alt="">
+        <img src="{{ asset('svg/LineCatalog.svg') }}" id="tab_upline_1" class="tab_upline tab_upline_1 "
+            alt="">
         <img src="{{ asset('svg/LineCatalog.svg') }}" id="tab_upline_2" class="tab_upline tab_upline_2" alt="">
         <hr class="catalog_hr">
 
@@ -86,7 +98,7 @@
             </div>
         </div>
         <div class="tab-content " id="content-2">
-            
+
             <div class="d-flex">
                 <ul class="list left-list">
                     <li>Aliance</li>
@@ -157,7 +169,7 @@
                     <li>БРОВИ </li>
                     <li>КРАСКА zTattoo Ink</li>
                 </ul>
-                
+
             </div>
         </div>
     </div>

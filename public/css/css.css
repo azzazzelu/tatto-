@@ -15,6 +15,14 @@ body {
 
 }
 
+.font75 {
+    color: #BB8C5F;
+    font-family: Forum;
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 75px;
+}
+
 .font_size15 {
     font-size: 15px;
 }
@@ -26,6 +34,7 @@ body {
 .font_size17 {
     font-size: 17px;
 }
+
 .font_size20 {
     font-size: 20px;
 }
@@ -776,8 +785,9 @@ body {
     width: 392px;
     height: 604px;
     background: #f5f5f5;
-  
+
 }
+
 .cardPromoImg {
     width: 392px;
     height: 230px;
@@ -787,10 +797,12 @@ body {
     margin: 0 auto;
     width: 312px;
 }
-.btn_container{
+
+.btn_container {
     text-align: center;
 }
-.btn_tat_promo{
+
+.btn_tat_promo {
     margin: 0 auto;
     width: 250px;
     height: 70px;
@@ -799,28 +811,47 @@ body {
     border: none;
     background-image: url('/svg/btn.svg');
     background-size: contain;
-    background-position: center;text-align: center;
+    background-position: center;
+    text-align: center;
 }
+
 /* CONTACTS */
-.office{
+.office {
     display: flex;
     gap: 40px;
 }
-.officeLeft{
+
+.officeLeft {
     width: 804px;
     height: 568px;
     background: #f5f5f5;
 }
-.officeRight{
+
+.officeRight {
     width: 392px;
     height: 568px;
     background: #f5f5f5;
 }
-.containerofficeLeft{
+
+.containerofficeLeft {
     width: 714px;
     margin: 0 auto;
 }
-.containerofficeRight{
+
+.containerofficeRight {
     width: 312px;
     margin: 0 auto;
+}
+
+/* page 404 */
+
+.error_link {
+    color: #BB8C5F;
+    text-decoration: none;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+
 }
