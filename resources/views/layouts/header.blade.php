@@ -27,13 +27,23 @@
                 <img src="{{ asset('svg/basket.svg') }}" alt="">
             </div>
             <img src="{{ asset('svg/likes.svg') }}" alt="">
+            @auth
+                @if (auth()->user()->admin)
+                    <div class="d-flex align-items-center">
+                        <a class="nav-link" href="{{ route('admin') }}">Админ-панель</a>
+                    </div>
 
+                    {{-- <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin') }}">Админ-панель</a>
+                    </li> --}}
+                @endif
+            @endauth
             @if (Route::has('login'))
                 @auth
                     <a href="{{ route('register') }}">
                         <img src="{{ asset('svg/profil.svg') }}" alt="">
                     </a>
-                    <a  href="{{ route('logout') }}"><img src="{{ asset('svg/logout.svg') }}" alt=""></a>
+                    <a href="{{ route('logout') }}"><img src="{{ asset('svg/logout.svg') }}" alt=""></a>
                 @else
                     <a href="{{ route('register') }}"><img src="{{ asset('svg/profil.svg') }}" alt=""></a>
                     <a href="{{ route('login') }}"><img src="{{ asset('svg/login.svg') }}" alt=""></a>
@@ -76,7 +86,7 @@
             alt="">
         <img src="{{ asset('svg/LineCatalog.svg') }}" id="tab_upline_2" class="tab_upline tab_upline_2" alt="">
         <hr class="catalog_hr">
-
+        {{-- 
         <div class="tab-content " id="content-1">
             <div class="d-flex">
                 <ul class="list left-list">
@@ -96,8 +106,28 @@
                     <li>Защита, ёмкости, расходные материалы</li>
                 </ul>
             </div>
+        </div> --}}
+
+        <div class="tab-content " id="content-1">
+            <div class="d-flex">
+                @php
+                    // Преобразуем коллекцию в массив
+                    $chunkedCategories = array_chunk($categories->toArray(), ceil($categories->count() / 2));
+                @endphp
+
+                @foreach ($chunkedCategories as $index => $chunk)
+                    <ul class="list @if ($index === 0) left-list @else right-list @endif">
+                        @foreach ($chunk as $category)
+                            <li>{{ $category['name'] }}</li>
+                            <!-- Используйте $category['name'] вместо $category->name -->
+                        @endforeach
+                    </ul>
+                @endforeach
+            </div>
+
         </div>
-        <div class="tab-content " id="content-2">
+
+        {{-- <div class="tab-content " id="content-2">
 
             <div class="d-flex">
                 <ul class="list left-list">
@@ -171,6 +201,22 @@
                 </ul>
 
             </div>
+        </div> --}}
+        <div class="tab-content " id="content-2">
+            <div class="d-flex">
+                @php
+                    $chunkedBrands = array_chunk($brands->toArray(), ceil($brands->count() / 5));
+                @endphp
+
+                @foreach ($chunkedBrands as $index => $chunk)
+                    <ul class="list @if ($index % 2 === 0) left-list @else right-list @endif">
+                        @foreach ($chunk as $brand)
+                            <li>{{ $brand['name'] }}</li>
+                          
+                        @endforeach
+                    </ul>
+                @endforeach
+            </div>
         </div>
     </div>
 </div>
@@ -187,7 +233,7 @@
         document.getElementById('categories-popup').style.display = 'none';
     });
 
-    // Закрытие по клику вне попапа
+
     window.addEventListener('click', function(event) {
         const popup = document.getElementById('categories-popup');
         if (event.target === popup) {

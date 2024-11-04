@@ -1,20 +1,25 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TattooController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Middleware\Admin;
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/',function(){
-    return view('home.home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home.home');
+// })->name('home');
 
-Route::get('/promoCodes' , function(){
+Route::get('/', [TattooController::class, 'index'])->name('home');
+Route::get('/promoCodes', function () {
     return view('promoCodes.index');
 })->name('promoCodes');
 
-Route::get('/contacts' , function(){
+Route::get('/contacts', function () {
     return view('contacts.index');
 })->name('contacts');
 
@@ -55,4 +60,10 @@ Route::middleware('auth')->group(function () {
     })->middleware('throttle:3,1')->name('verification.send');
 
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+});
+
+
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => [Admin::class]], function () {
+    Route::get('/', [AdminController::class, 'main'])->name('admin');
 });
