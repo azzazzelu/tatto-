@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TattooController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Middleware\Admin;
+use App\Models\Products;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -22,6 +24,11 @@ Route::get('/promoCodes', function () {
 Route::get('/contacts', function () {
     return view('contacts.index');
 })->name('contacts');
+Route::group( ['prefix' => 'catalog'] ,function(){
+    Route::get("/",[ProductController::class,'index'])->name('catalog');
+    // Route::get('/category/{categor}', [ProductController::class,'showCatalog'])->name('catalog_categories.show');
+    Route::get('/category/{categoryList}', [ProductController::class,'showCatalog'])->name('catalog.categories.show');
+});
 
 Route::middleware('guest')->group(function () {
     Route::get('/register', [UserController::class, 'create'])->name('register');

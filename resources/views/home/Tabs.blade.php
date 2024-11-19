@@ -17,41 +17,7 @@
                     <button class="add-to-cart">Добавить в корзину</button>
                 </div>
 
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Product Image">
-                    <div class="card-title">Название товара 2</div>
-                    <div class="card-price">Цена: 2000 руб.</div>
-                    <button class="add-to-cart">Добавить в корзину</button>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Product Image">
-                    <div class="card-title">Название товара 3</div>
-                    <div class="card-price">Цена: 3000 руб.</div>
-                    <button class="add-to-cart">Добавить в корзину</button>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Product Image">
-                    <div class="card-title">Название товара 4</div>
-                    <div class="card-price">Цена: 4000 руб.</div>
-                    <button class="add-to-cart">Добавить в корзину</button>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Product Image">
-                    <div class="card-title">Название товара 5</div>
-                    <div class="card-price">Цена: 5000 руб.</div>
-                    <button class="add-to-cart">Добавить в корзину</button>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Product Image">
-                    <div class="card-title">Название товара 6</div>
-                    <div class="card-price">Цена: 6000 руб.</div>
-                    <button class="add-to-cart">Добавить в корзину</button>
-                </div>
-
+                
             </div>
         </div>
 

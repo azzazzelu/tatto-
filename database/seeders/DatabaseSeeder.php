@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Products;
 use App\Models\User;
+use Database\Factories\ProductFactory;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,10 +21,17 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+      
         $this->call([
             AdminUserSeeder::class,
             CategoriesTableSeeder::class,
             BrandsTableSeeder::class,
+
         ]);
+        Products::factory(10)->create();
+        // Products::factory()->create([
+        //     'name' => 'Foxxx Kitsune Mini Black Vintage RCA',
+        //     'category_id' => '3',
+        // ]);
     }
 }
