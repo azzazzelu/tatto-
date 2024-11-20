@@ -170,22 +170,25 @@ body {
     padding: 0;
     margin: 0;
 }
-
+.list li a {
+    color: #3E424B;
+    text-decoration: none;
+}
 .left-list {
     margin-right: 50px;
 }
 .right-list{
     margin-right: 50px;
 }
-.list li {
+.list li  {
     margin: 5px 0;
     font-size: 12px;
     font-weight: 400;
     text-align: left;
-
+    color: #3E424B;
 }
 
-.list li:hover {
+.list li a:hover {
     cursor: pointer;
 
     color: #BB8C5F;
@@ -347,14 +350,16 @@ body {
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
 .card {
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 1s, box-shadow 0.3s ease-in-out;
 }
 
 .card:not(:hover) {
     transform: scale(0.95);
+    transition: transform 1s, box-shadow 0.3s ease-in-out;
 }
 
 .card:hover .add-to-cart {
@@ -370,6 +375,18 @@ body {
     background-image: url('/svg/btn.svg');
     background-size: contain;
     background-position: center;
+}
+.btn_tatWhite {
+    width: 250px;
+    height: 70px;
+    color: #BB8C5F;
+    border: none;
+    color: #BB8C5F;
+    background: white;
+    background-image: url('/img/btnWhite.png');
+    background-size: contain;
+    background-position: center;
+
 }
 
 /*  CATALOG */

@@ -27,7 +27,10 @@ Route::get('/contacts', function () {
 Route::group( ['prefix' => 'catalog'] ,function(){
     Route::get("/",[ProductController::class,'index'])->name('catalog');
     // Route::get('/category/{categor}', [ProductController::class,'showCatalog'])->name('catalog_categories.show');
+    Route::get('/category', [ProductController::class,'category']);
     Route::get('/category/{categoryList}', [ProductController::class,'showCatalog'])->name('catalog.categories.show');
+    Route::get('/{id}', [ProductController::class,'showProducts'])->name('product.show');
+    Route::get('/brands/{brandList}', [ProductController::class,'showBrands'])->name('catalog.brands.show');
 });
 
 Route::middleware('guest')->group(function () {

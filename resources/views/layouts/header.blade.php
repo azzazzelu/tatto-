@@ -111,14 +111,20 @@
         <div class="tab-content " id="content-1">
             <div class="d-flex">
                 @php
+                    use App\Models\Brands;
+                    use App\Models\Category;
                     // Преобразуем коллекцию в массив
+                    $categories = Category::all();
+                    $brands = Brands::all();
                     $chunkedCategories = array_chunk($categories->toArray(), ceil($categories->count() / 2));
                 @endphp
 
                 @foreach ($chunkedCategories as $index => $chunk)
                     <ul class="list @if ($index === 0) left-list @else right-list @endif">
                         @foreach ($chunk as $category)
-                            <li>{{ $category['name'] }}</li>
+                            <li><a
+                                    href="{{ route('catalog.categories.show', ['categoryList' => $category['name']]) }}">{{ $category['name'] }}</a>
+                            </li>
                             <!-- Используйте $category['name'] вместо $category->name -->
                         @endforeach
                     </ul>
@@ -211,8 +217,10 @@
                 @foreach ($chunkedBrands as $index => $chunk)
                     <ul class="list @if ($index % 2 === 0) left-list @else right-list @endif">
                         @foreach ($chunk as $brand)
-                            <li>{{ $brand['name'] }}</li>
-                          
+                            {{-- <li>{{ $brand['name'] }}</li> --}}
+                            <li><a
+                                    href="{{ route('catalog.brands.show', ['brandList' => $brand['name']]) }}">{{ $brand['name'] }}</a>
+                            </li>
                         @endforeach
                     </ul>
                 @endforeach

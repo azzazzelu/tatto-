@@ -1,8 +1,7 @@
 <div class="container    mt-5">
     <h1 class="font60 text-center">Каталог</h1>
     <div class="d-flex gap-3 justify-content-center mt-3">
-        <a href="{{ route('catalog.categories.show', ['categoryList' => 'Тату наборы']) }}" class="cat cat1 ">
-            {{-- {{ route('catalog_categories.show', ['categories' => 'Тату наборы']) }} --}}
+        <a href="{{ route('catalog.categories.show', ['categoryList' => 'Наборы для татуировок' ]) }}" class="cat cat1 ">
             <p class=" pt-4 ps-4">Тату <br> наборы </p>
         </a>
         <a href="#" class="cat cat2 ">

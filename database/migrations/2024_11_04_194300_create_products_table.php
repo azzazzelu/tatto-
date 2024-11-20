@@ -12,13 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->decimal('price', 8, 2);
-            $table->foreignId('category_id')->constrained();
-            $table->foreignId('brand_id')->constrained();
-            $table->timestamps();
+            $table->id(); // ID продукта
+            $table->string('name'); // Название продукта
+            $table->text('description')->nullable(); // Полное описание
+            $table->text('short_description')->nullable(); // Краткое описание
+            $table->unsignedBigInteger('price'); // Цена в целых числах
+            $table->binary('img')->nullable(); // Изображение в формате BLOB
+            $table->foreignId('category_id')->constrained(); // Внешний ключ для категории
+            $table->foreignId('brand_id')->constrained(); // Внешний ключ для бренда
+            $table->timestamps(); // Поля created_at и updated_at
         });
     }
 
