@@ -23,8 +23,23 @@
             <img src="{{ asset('img/logo.png') }}" alt="">
 
             <div class="d-flex align-items-center justify-content-center align-items-center">
-                <h1 class="font_Jost font_size15 me-2">37 280 ₽</h1>
-                <img src="{{ asset('svg/basket.svg') }}" alt="">
+                @php
+                    use App\Models\CartItem;
+
+                    $totalPrice = 0;
+                    $cartItems = CartItem::where('user_id', Auth::id())->get();
+
+                    foreach ($cartItems as $item) {
+                        $totalPrice += $item->product->price * $item->quantity;
+                    }
+
+                @endphp
+                
+                @if ($totalPrice > 0)
+                    <h1 class="font_Jost font_size15 me-2">{{ $totalPrice }}₽</h1>
+                @endif
+                <a href="{{ route('basket.index') }}"><img src="{{ asset('svg/basket.svg') }}" alt=""></a>
+
             </div>
             <img src="{{ asset('svg/likes.svg') }}" alt="">
             @auth

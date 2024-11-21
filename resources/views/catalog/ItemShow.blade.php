@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('content')
     <div class="container">
+        itemShow
         <img src="{{$product->img}}" alt=" {{$product->name}}">
         {{$product->name}}
     </div>

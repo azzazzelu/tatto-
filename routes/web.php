@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TattooController;
 use App\Http\Controllers\UserController;
@@ -32,6 +33,9 @@ Route::group( ['prefix' => 'catalog'] ,function(){
     Route::get('/{id}', [ProductController::class,'showProducts'])->name('product.show');
     Route::get('/brands/{brandList}', [ProductController::class,'showBrands'])->name('catalog.brands.show');
 });
+Route::get('/basket', [CartController::class, 'index'])->name('basket.index');
+Route::post('/add-to-basket', [CartController::class, 'addToCart'])->name('item.add');
+Route::delete('/remove-from-basket/{itemId}', [CartController::class, 'removeFromCart'])->name('item.remove');
 
 Route::middleware('guest')->group(function () {
     Route::get('/register', [UserController::class, 'create'])->name('register');
